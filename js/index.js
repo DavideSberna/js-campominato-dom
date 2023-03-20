@@ -29,6 +29,8 @@ btnAgain.addEventListener("click", restartFlow);
 function playGenerate(e){
     e.preventDefault()
     squareGrid.innerHTML= "";
+    bombsCheck = false
+    n = 0
     resultCont.classList.add("CM-display")
     let levelInput = document.querySelector("#level").value;
     switch(levelInput){
@@ -72,6 +74,7 @@ function clickColorSquare(squareCheck, bombs){
                 n++
             }
         }
+        
         result.innerHTML = n;
         
         let vittoria = numSquares - numBombs -1;
@@ -136,6 +139,7 @@ function createSquare(squareSqrt, index){
 
 function restartFlow(){
     PopUpRes.classList.add("d-none")   
+     
 }
 
                   
